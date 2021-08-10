@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang='ja'>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css">
+        <title>WEB計算機, シンプル</title>
+    </head>
+    <header>
+        <div style="padding: 1em; margin: 1em;">
+            <h2>WEB計算機</h2>
+    </header>
+    <body>
+        <form action="/" method="post">
+            <tr>
+                <div class="leftmenu">
+                    <h5>計算の手順</h5>
+                    <h6>・２つのフォームに数字を入力</h6>
+                    <h6>・演算子ボタン（+、-、×、÷︎）をクリック</h6>
+                    <h6>・結果が表示されます。</h6>
+                </div>
+                <div style="text-align: center" class="m-5">
+                    <td><input type="text" name="value1" ></td>
+                    <td><input type="text" name="value2" ></td>
+                </div>
+                <div style="text-align: center">
+                    <input type="submit" name="plus" value="+" class="btn btn-primary btn-lg w-10 mb-1" >
+                    <input type="submit" name="minus" value="-" class="btn btn-primary btn-lg w-10 mb-1" >
+                    <input type="submit" name="multiply" value="×" class="btn btn-primary btn-lg w-10 mb-1" >
+                    <input type="submit" name="divided" value="÷" class="btn btn-primary btn-lg w-10 mb-1" >
+                </div>
+                <div style="text-align: center" class="m-5">
+                    <h3><%= @value1 %></h3>
+                    <h3><%= @operator %></h3>
+                    <h3><%= @value2 %></h3>
+                    <h3>=<%= @plus %><%= @minus %><%= @multiply %><%= @divided %></h3>
+                </div>
+            </tr>
+        </form>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
